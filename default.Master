@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.master.cs" Inherits="MainPortfolio._default" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <title>Michelle Feliciano Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: #ffffff;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: 2px solid #ffffff;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background: #ffffff;
+            color: #2575fc;
+        }
+
+        main {
+            padding: 40px 20px;
+            min-height: 70vh;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 20px;
+        }
+
+        footer h2 {
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #6a11cb;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <h1>Michelle Feliciano Portfolio</h1>
+            <nav>
+                <a href="Home.aspx">Home</a>
+                <a href="AboutMe.aspx">Learn More About Me</a>
+                <a href="Projects.aspx">See My Projects</a>
+                <a href="Contact.aspx">Contact Me</a>
+            </nav>
+        </header>
+        <main>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </main>
+        <footer>
+            <h2>Contact Information</h2>
+            <p>
+                <a href="mailto:michelle.feliciano502@gmail.com">michelle.feliciano502@gmail.com</a>
+            </p>
+            <p>© 2024 Michelle Feliciano. All rights reserved.</p>
+        </footer>
+    </form>
+</body>
+</html>
