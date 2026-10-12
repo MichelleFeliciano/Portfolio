@@ -54,7 +54,7 @@
         { "@type": "CollegeOrUniversity", "name": "University of North Texas" },
         { "@type": "CollegeOrUniversity", "name": "Tarrant County College" }
       ],
-      "knowsAbout": ["Business systems", "Web development", "Database systems", "Data analysis", "IT support", "Accessibility"],
+      "knowsAbout": ["Business systems", "Web development", "TypeScript", "Progressive web apps", "Database systems", "Data analysis", "Automated testing", "IT support", "Accessibility"],
       "sameAs": [
         "https://www.linkedin.com/in/michelle-felicianowebdev",
         "https://github.com/MichelleFeliciano"
@@ -170,7 +170,7 @@
       <!-- At-a-glance facts (the numbers count up in script.js). -->
       <ul class="glance" aria-label="At a glance">
         <li><strong>B.S.</strong><span>Business Computer Information Systems, University of North Texas, 2025</span></li>
-        <li><strong data-count="3">3</strong><span>Live projects, each with its code public on GitHub</span></li>
+        <li><strong data-count="9">9</strong><span>Projects built from scratch, six of them live on the web</span></li>
         <li><strong data-count="100">100</strong><span>Lighthouse accessibility, best practices, and SEO score on every page (performance 97 to 100)</span></li>
         <li><strong>0</strong><span>External dependencies: plain HTML, CSS, and JavaScript</span></li>
       </ul>
@@ -182,6 +182,8 @@
     <ul class="marquee-list">
       <li>SQL</li>
       <li>JavaScript</li>
+      <li>TypeScript</li>
+      <li>React</li>
       <li>HTML</li>
       <li>CSS</li>
       <li>Excel</li>
@@ -192,6 +194,7 @@
       <li>Data analysis</li>
       <li>Data visualization</li>
       <li>Systems development</li>
+      <li>Automated testing</li>
       <li>IT support</li>
       <li>Accessibility</li>
       <li>Responsive design</li>
@@ -264,6 +267,7 @@
             <li class="tag">Python <span class="tag-note">(Beginner)</span></li>
             <li class="tag">Java <span class="tag-note">(Beginner)</span></li>
             <li class="tag">JavaScript</li>
+            <li class="tag">TypeScript</li>
           </ul>
         </div>
         <div class="skill-card">
@@ -284,6 +288,8 @@
             <li class="tag">HTML</li>
             <li class="tag">CSS</li>
             <li class="tag">JavaScript</li>
+            <li class="tag">React</li>
+            <li class="tag">Progressive Web Apps</li>
           </ul>
         </div>
         <div class="skill-card">
@@ -293,6 +299,8 @@
             <li class="tag">Data Analysis</li>
             <li class="tag">Data Visualization</li>
             <li class="tag">Systems Development</li>
+            <li class="tag">Automated Testing</li>
+            <li class="tag">API Integration</li>
             <li class="tag">IT Support</li>
             <li class="tag">Accessibility</li>
             <li class="tag">Responsive Web Design</li>
@@ -306,7 +314,7 @@
   <section id="projects" class="section section-alt">
     <div class="wrap">
       <h2><svg class="heading-leaf" viewBox="0 0 100 140" aria-hidden="true"><use href="#leaf-shape"></use></svg><span class="section-index">04</span> Projects</h2>
-      <p class="section-note">Hands-on builds spanning full-stack development and web design — each taken from concept through to a deployed result.</p>
+      <p class="section-note">Hands-on builds spanning full-stack development, data, and web design — each taken from concept through to a working result.</p>
       <!-- data-skills feeds the skills matrix, data-short is its column label, and data-frames lists the extra screenshots for the preview loop. -->
       <div class="project-grid">
         <article class="project-card" data-short="Sagebrush" data-skills="html css javascript responsive accessibility deployment">
@@ -321,9 +329,9 @@
           </div>
           <p class="project-tag">Personal project</p>
           <h3>Sagebrush Sites — Web Development for Salons &amp; Beauty Businesses</h3>
-          <p class="project-date">September 2026</p>
+          <p class="project-date">September – October 2026</p>
           <p><strong>Goal:</strong> design and launch a freelance web-studio brand for salons and beauty businesses, from positioning through a deployed site.</p>
-          <p><strong>What I built:</strong> a live, hand-coded, mobile-first multi-page website (Home, About, Process, Skills, Work, Contact) on a custom domain, with four concept case studies — spec work for fictional clients, built to demonstrate craft rather than list real customers — plus a client-intake questionnaire and a reusable portfolio template shared with fellow students.</p>
+          <p><strong>What I built:</strong> a live, hand-coded, mobile-first multi-page website (Home, Work, Process, About, Skills, Free Website Check, Contact) on a custom domain, with four concept case studies — spec work for fictional clients, built to demonstrate craft rather than list real customers — plus a client-intake questionnaire and a reusable portfolio template shared with fellow students. Later passes fixed contrast, keyboard, and tap-target problems and switched images to WebP.</p>
           <p><strong>Stack:</strong> HTML, CSS, JavaScript, zero external dependencies.</p>
           <p class="project-links">
             <a class="case-link" href="projects/sagebrush-sites.html">Read Case Study<span class="sr-only"> for Sagebrush Sites</span> →</a>
@@ -331,7 +339,7 @@
             <a href="https://github.com/MichelleFeliciano/sagebrush-sites" target="_blank" rel="noopener noreferrer">View Code on GitHub<span class="sr-only"> for Sagebrush Sites (opens in a new tab)</span> →</a>
           </p>
         </article>
-        <article class="project-card" data-short="Second Memory" data-skills="html css javascript python pwa storage data security deployment">
+        <article class="project-card" data-short="Second Memory" data-skills="html css javascript python accessibility pwa storage data api security testing deployment">
           <div class="device-stage" data-tilt>
             <div class="device-rig">
               <div class="browser" data-frames="images/frame-second-memory-2.webp,images/frame-second-memory-3.webp">
@@ -345,7 +353,7 @@
           <h3>Second Memory</h3>
           <p class="project-date">September 2026 – Present</p>
           <p><strong>Goal:</strong> replace scattered notes apps and spreadsheets with one offline-first place to track books, recipes, to-dos, a shopping list, and a household budget.</p>
-          <p><strong>What I built:</strong> a multi-collection app with filtering, sorting, and undo/redo across every collection, plus a small Python sync server I wrote (with conflict handling that never silently discards an edit) so data stays in step between my phone and computer.</p>
+          <p><strong>What I built:</strong> a multi-collection app (books with a yearly reading goal, recipes with scaling and a cook mode, repeating to-dos, a pay-period budget, a journal, and more) with search, filtering, sorting, and undo/redo across every collection, plus a small Python sync server I wrote (with conflict handling that never silently discards an edit, and daily backups) so data stays in step between my phone and computer. Backed by over 500 automated browser checks and 47 server tests.</p>
           <p><strong>Stack:</strong> HTML, CSS, JavaScript, browser storage, Python (sync server). Installable as a PWA; works fully offline.</p>
           <p class="project-links">
             <a class="case-link" href="projects/second-memory.html">Read Case Study<span class="sr-only"> for Second Memory</span> →</a>
@@ -353,7 +361,7 @@
             <a href="https://github.com/MichelleFeliciano/second-memory" target="_blank" rel="noopener noreferrer">View Code on GitHub<span class="sr-only"> for Second Memory (opens in a new tab)</span> →</a>
           </p>
         </article>
-        <article class="project-card" data-short="Operations Hub" data-skills="javascript sql data security testing accessibility">
+        <article class="project-card" data-short="Operations Hub" data-skills="typescript javascript sql data api security testing accessibility">
           <div class="device-stage" data-tilt>
             <div class="device-rig">
               <div class="browser" data-frames="images/frame-business-operations-hub-2.webp,images/frame-business-operations-hub-3.webp">
@@ -367,13 +375,73 @@
           <h3>Business Operations Hub</h3>
           <p class="project-date">October 2026</p>
           <p><strong>Goal:</strong> replace scattered proposals, time sheets, and invoices with one system that follows client work from first inquiry to paid invoice, at no recurring cost.</p>
-          <p><strong>What I built:</strong> a self-hosted business system covering leads, quotes and client approval, projects, time, expenses, invoices and payments, reports and exports, and a client portal, with role-based access, 19 database migrations, and 551 automated tests.</p>
+          <p><strong>What I built:</strong> a self-hosted business system covering leads and scoping, quotes and client approval, projects, time, expenses, invoices and payments, reports and exports, and emailed client links, with role-based access, 27 database migrations, and over 550 automated tests.</p>
           <p><strong>Stack:</strong> TypeScript, React, Hono, PostgreSQL. Private repository (code walkthrough on request); screenshots show made-up sample data.</p>
           <p class="project-links">
             <a class="case-link" href="projects/business-operations-hub.html">Read Case Study<span class="sr-only"> for Business Operations Hub</span> →</a>
           </p>
         </article>
-        <article class="project-card" data-short="Portfolio" data-skills="html css javascript responsive accessibility deployment">
+        <article class="project-card" data-short="TripNest" data-skills="typescript css responsive accessibility pwa storage data api security testing deployment">
+          <div class="device-stage device-stage--phones">
+            <div class="phone"><picture><source srcset="images/tripnest-trips.webp" type="image/webp"><img src="images/tripnest-trips.jpg" width="260" height="563" alt="TripNest on a phone: the list of trips, showing a sample Puerto Rico vacation marked In Progress." loading="lazy"></picture></div>
+            <div class="phone"><picture><source srcset="images/tripnest-itinerary.webp" type="image/webp"><img src="images/tripnest-itinerary.jpg" width="260" height="563" alt="The TripNest itinerary on a phone: a flight and a hotel check-in, each with its time in the local time zone, and a warning about a possible schedule overlap." loading="lazy"></picture></div>
+            <div class="phone"><picture><source srcset="images/tripnest-expenses.webp" type="image/webp"><img src="images/tripnest-expenses.jpg" width="260" height="563" alt="TripNest expenses on a phone: a who-owes-whom summary with Mark as paid buttons and the total spent in dollars and euros." loading="lazy"></picture></div>
+          </div>
+          <p class="project-tag">Personal project</p>
+          <h3>TripNest</h3>
+          <p class="project-date">October 2026</p>
+          <p><strong>Goal:</strong> plan a whole trip in one place (itinerary, reservations, packing, and shared expenses) on a phone, offline, with no account and no server holding anyone's travel details.</p>
+          <p><strong>What I built:</strong> an offline-first trip planner with an itinerary that shows each time in the place's own time zone, reservations and packing lists, shared expenses that always split to the exact cent and show who owes whom, maps, a printable booklet, backups, and a merge that combines an updated trip file from a second phone without losing edits.</p>
+          <p><strong>Stack:</strong> React, TypeScript, IndexedDB, Leaflet and OpenStreetMap. Installable PWA on GitHub Pages, with over 300 automated tests plus browser tests of every screen. Screenshots show a made-up sample trip.</p>
+          <p class="project-links">
+            <a href="https://michellefeliciano.github.io/tripnest/" target="_blank" rel="noopener noreferrer">View Live Site<span class="sr-only"> for TripNest (opens in a new tab)</span> →</a>
+            <a href="https://github.com/MichelleFeliciano/tripnest" target="_blank" rel="noopener noreferrer">View Code on GitHub<span class="sr-only"> for TripNest (opens in a new tab)</span> →</a>
+          </p>
+        </article>
+        <article class="project-card" data-short="MealMate" data-skills="typescript css responsive accessibility pwa storage data api security testing deployment">
+          <div class="device-stage device-stage--icon"><img src="images/icon-mealmate.png" width="96" height="96" alt="" loading="lazy"></div>
+          <p class="project-tag">Personal project</p>
+          <h3>MealMate</h3>
+          <p class="project-date">October 2026</p>
+          <p><strong>Goal:</strong> plan meals, build the grocery list from the plan, and keep an eye on the food budget and daily drinks, without creating an account.</p>
+          <p><strong>What I built:</strong> a mobile-first meal planner whose grocery list combines matching ingredients (cans and pounds never merge), a large-button shopping mode, budget tracking from recorded shopping trips, a drink tracker, leftovers and batch cooking, and recipe import, plus optional end-to-end encrypted sync and reminders through a small Cloudflare Worker.</p>
+          <p><strong>Stack:</strong> React, TypeScript, TanStack Query, Zod, Cloudflare Worker and D1. Installable PWA on GitHub Pages, with 320 automated tests (unit, cloud-service, and browser). Private repository (code walkthrough on request).</p>
+          <p class="project-links">
+            <a href="https://michellefeliciano.github.io/mealmate/" target="_blank" rel="noopener noreferrer">View Live Site<span class="sr-only"> for MealMate (opens in a new tab)</span> →</a>
+          </p>
+        </article>
+        <article class="project-card" data-short="StoryVault" data-skills="typescript css responsive pwa storage data security testing deployment">
+          <div class="device-stage device-stage--icon"><img src="images/icon-storyvault.png" width="96" height="96" alt="" loading="lazy"></div>
+          <p class="project-tag">Personal project</p>
+          <h3>StoryVault</h3>
+          <p class="project-date">October 2026</p>
+          <p><strong>Goal:</strong> give a novel-length manuscript a private writing studio that keeps the writing as plain files on my own computer, with no accounts and no subscription.</p>
+          <p><strong>What I built:</strong> a local-first writing studio that imports a manuscript (Word, Markdown, text, ODT, or EPUB), splits it into chapters, and checks every import word for word. It adds an editor with proofreading and continuity checks, a story bible, exports to Word, PDF, EPUB, and more, verified backups with automatic recovery points, and an offline phone version with file-based sync.</p>
+          <p><strong>Stack:</strong> React, TypeScript, TipTap, and a small Node server for local files, with more than 140 automated tests. Private repository (code walkthrough on request).</p>
+        </article>
+        <article class="project-card" data-short="MTG Tracker" data-skills="typescript css responsive pwa data sql api security testing deployment">
+          <div class="device-stage device-stage--icon"><img src="images/icon-mtg.png" width="96" height="96" alt="" loading="lazy"></div>
+          <p class="project-tag">Personal project</p>
+          <h3>MTG Collection Tracker</h3>
+          <p class="project-date">October 2026</p>
+          <p><strong>Goal:</strong> know where every card in a physical Magic: The Gathering collection is stored and what the whole collection is worth, from a phone.</p>
+          <p><strong>What I built:</strong> a self-hosted app that searches any card printing through the Scryfall API, then stores cards by box, binder, or deck. It keeps cached market prices with retry and stale-price handling, tracks value history, runs a want list with price alerts, suggests deck upgrades using only cards I already own, and takes weekly backups.</p>
+          <p><strong>Stack:</strong> Next.js, React, TypeScript, and libSQL (SQLite locally, Turso hosted) on Vercel with a daily scheduled job. Installable PWA with over 100 automated tests, including fuzz tests and every API route called with hostile input. Private repository (code walkthrough on request).</p>
+        </article>
+        <article class="project-card" data-short="Family Budget" data-skills="html css javascript responsive accessibility pwa storage data api security testing deployment">
+          <div class="device-stage device-stage--icon"><img src="images/icon-family-budget.png" width="96" height="96" alt="" loading="lazy"></div>
+          <p class="project-tag">Personal project</p>
+          <h3>Our Family Budget</h3>
+          <p class="project-date">September – October 2026</p>
+          <p><strong>Goal:</strong> a household budget my family can actually read and update, with big text and big buttons, that works offline and shows everyone the same numbers.</p>
+          <p><strong>What I built:</strong> a spreadsheet-like budget with bills due soon and one-tap Mark Paid, a pay-period view, regular paychecks, savings goals, debts with a debt-free date estimate, month-by-month comparisons, undo, and CSV export. Devices stay in step through a private GitHub repository that holds one data file, so there is no server and no accounts. The public app itself holds no budget data.</p>
+          <p><strong>Stack:</strong> HTML, CSS, JavaScript with no framework, a service worker for offline use, and the GitHub API. Hosted on GitHub Pages. The live site opens to a setup screen because the numbers live in a separate private repository.</p>
+          <p class="project-links">
+            <a href="https://michellefeliciano.github.io/family-budget-app/" target="_blank" rel="noopener noreferrer">View Live Site<span class="sr-only"> for Our Family Budget (opens in a new tab)</span> →</a>
+            <a href="https://github.com/MichelleFeliciano/family-budget-app" target="_blank" rel="noopener noreferrer">View Code on GitHub<span class="sr-only"> for Our Family Budget (opens in a new tab)</span> →</a>
+          </p>
+        </article>
+        <article class="project-card" data-short="Portfolio" data-skills="html css javascript responsive accessibility testing deployment">
           <div class="device-stage" data-tilt>
             <div class="device-rig">
               <div class="browser" data-frames="images/frame-portfolio-2.webp,images/frame-portfolio-3.webp">

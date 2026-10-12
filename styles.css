@@ -486,9 +486,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 24px;
 }
-/* Four projects: a clean 2 x 2 on wide screens instead of three and one left over. */
+/* Two columns on wide screens. An odd last card sits centered on its own row instead of hugging the left. */
 @media (min-width: 900px) {
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-grid > .project-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 12px);
+  }
 }
 .project-card {
   background: var(--surface);
@@ -737,8 +742,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   border-radius: var(--radius);
 }
 
-.matrix { width: 100%; min-width: 640px; border-collapse: collapse; }
-.matrix th, .matrix td { padding: 10px 14px; border-bottom: 1px solid var(--border); text-align: center; }
+.matrix { width: 100%; min-width: 880px; border-collapse: collapse; } /* nine project columns: scroll sideways on small screens */
+.matrix th, .matrix td { padding: 10px 6px; border-bottom: 1px solid var(--border); text-align: center; }
 .matrix tbody tr:last-child th, .matrix tbody tr:last-child td { border-bottom: 0; }
 .matrix thead th {
   font-size: 0.78rem;
@@ -780,12 +785,12 @@ ul { margin: 0; padding: 0; list-style: none; }
 .matrix-bar {
   display: inline-block;
   vertical-align: middle;
-  width: 72px;
+  width: 56px;
   height: 8px;
   border-radius: 999px;
   background: var(--border);
   overflow: hidden;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 .matrix-fill { display: block; height: 100%; background: var(--accent); border-radius: 999px; }
 .matrix-count { color: var(--text-muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
@@ -996,6 +1001,31 @@ ul { margin: 0; padding: 0; list-style: none; }
   transform: translateZ(44px);
 }
 .phone img { width: 100%; height: auto; border-radius: 10px; }
+
+/* Cards without a desktop screenshot: three phones side by side (TripNest), or the app icon on the same tinted stage. */
+.device-stage--phones {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding-bottom: 28px;
+}
+.device-stage--phones .phone {
+  position: static;
+  width: 30%;
+  max-width: 150px;
+  transform: none;
+}
+.device-stage--icon {
+  display: flex;
+  justify-content: center;
+  padding-block: 28px;
+}
+.device-stage--icon img {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  box-shadow: 0 14px 24px -14px rgba(0, 0, 0, 0.55);
+}
 
 /* ---------------------------------------------------------
    At-a-glance strip under the hero

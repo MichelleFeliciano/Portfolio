@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Business Operations Hub Case Study — Michelle Feliciano</title>
-<meta name="description" content="Case study: Business Operations Hub, a self-hosted system that follows client work from first inquiry to paid invoice, with role-based access, a client portal, and 551 automated tests.">
+<meta name="description" content="Case study: Business Operations Hub, a self-hosted system that follows client work from first inquiry to paid invoice, with role-based access, emailed client links, and over 550 automated tests.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#3f6b34">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#12160e">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://michellefeliciano.github.io/projects/business-operations-hub.html">
 <meta property="og:title" content="Business Operations Hub Case Study — Michelle Feliciano">
-<meta property="og:description" content="A self-hosted system for quotes, approvals, projects, time, invoices, and reports, with a client portal and 551 automated tests.">
+<meta property="og:description" content="A self-hosted system for quotes, approvals, projects, time, invoices, and reports, with emailed client links and over 550 automated tests.">
 <meta property="og:image" content="https://michellefeliciano.github.io/social-preview.png">
 <meta property="og:image:alt" content="Michelle Feliciano, Business Systems and Information Technology, on a dark green background with leaves">
 <meta name="twitter:card" content="summary_large_image">
@@ -29,7 +29,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Business Operations Hub Case Study",
-  "description": "A self-hosted system for quotes, approvals, projects, time, invoices, and reports, with a client portal and 551 automated tests.",
+  "description": "A self-hosted system for quotes, approvals, projects, time, invoices, and reports, with emailed client links and over 550 automated tests.",
   "url": "https://michellefeliciano.github.io/projects/business-operations-hub.html",
   "inLanguage": "en-US",
   "author": { "@type": "Person", "name": "Michelle Feliciano", "url": "https://michellefeliciano.github.io/" }
@@ -99,7 +99,7 @@
       </nav>
       <p class="eyebrow">Case study</p>
       <h1>Business Operations Hub</h1>
-      <p class="case-lede">A self-hosted business system that follows one piece of client work from the first inquiry to a paid invoice: leads, quotes, client approval, projects, time, expenses, invoices, payments, and reports, with a separate portal for clients.</p>
+      <p class="case-lede">A self-hosted business system that follows one piece of client work from the first inquiry to a paid invoice: leads, quotes, client approval, projects, time, expenses, invoices, payments, and reports, with emailed links so clients can review and approve without an account.</p>
 
       <dl class="case-meta">
         <div><dt>Role</dt><dd>Designer &amp; developer</dd></div>
@@ -132,25 +132,25 @@
       <h2>What I built</h2>
       <ul>
         <li><strong>Quote to cash.</strong> Leads and intake, scoping and pricing, quotes and proposals, client approval by link, projects and tasks, time tracking, expenses, invoices, partial payments, and change orders, all connected so each step feeds the next.</li>
-        <li><strong>A client portal.</strong> Clients sign in to see only their own quotes, invoices, and documents. Every portal query is filtered by the signed-in client, and automated tests confirm one client can never see another's records.</li>
+        <li><strong>Client links instead of client logins.</strong> Clients review and approve quotes, proposals, and invoices through secure emailed links, so there are no client accounts to manage or secure. I first built a client login portal, then replaced it with these links.</li>
         <li><strong>Reports and exports.</strong> Revenue, profitability, expense, time, and inventory reports; CSV exports of ten datasets; branded PDFs; and a full backup file that carries checksums and is verified before a restore writes anything.</li>
         <li><strong>Website audits.</strong> An audit engine with seven modules (technical, SEO, performance, mobile, accessibility, security, and local-business data) that reports "unable to test" rather than guessing.</li>
-        <li><strong>Everything around the work.</strong> Documents with expiring share links, inventory, assets, and vendors, a calendar, an activity log, and role-based access for owners, admins, employees, contractors, and clients.</li>
+        <li><strong>Everything around the work.</strong> Documents with expiring share links, inventory, assets, and vendors, a calendar, an activity log, and role-based access for owners, admins, employees, and contractors.</li>
       </ul>
-      <p>In numbers: about 10,000 lines of TypeScript for the server, about 6,500 for the interface, 19 database migrations, and 233 API routes, with documentation covering the architecture, API, security model, backups, and deployment.</p>
+      <p>In numbers: about 10,000 lines of TypeScript for the server, about 6,400 for the interface, 27 database migrations, and about 250 API routes, with documentation covering the architecture, API, security model, backups, and deployment.</p>
 
       <h2>Decisions that mattered</h2>
       <ul>
         <li><strong>Money is never a decimal.</strong> Amounts are stored as whole cents, quantities as thousandths, and rates as basis points, and all of the arithmetic lives in one small, unit-tested module, so totals cannot drift by a fraction of a cent.</li>
-        <li><strong>Permissions are enforced on the server.</strong> The interface hides what a person should not use, but the server decides what they can read or change. A record someone may not see answers "not found," and the final review called all 233 routes as each role to check it.</li>
+        <li><strong>Permissions are enforced on the server.</strong> The interface hides what a person should not use, but the server decides what they can read or change. A record someone may not see answers "not found," and a full code review called all of the roughly 250 routes as six kinds of user to check it.</li>
         <li><strong>Approvals work as evidence.</strong> A sent quote cannot be edited, an approval link shows exactly one version, and each decision stores a fingerprint of the exact content that was approved, so a later change is detectable.</li>
         <li><strong>Money-handling code is built for two things happening at once.</strong> Sending an invoice and recording a payment run under database row locks, payments are append-only (a mistake is voided with a reason, not erased), and a unique index allows only one live invoice per quote.</li>
         <li><strong>Zero-cost by design.</strong> One SQL dialect, PostgreSQL, runs embedded for local use or on any hosted Postgres. Email and other paid services are optional, and the app works fully without them.</li>
-        <li><strong>Review, then regression tests.</strong> Four structured review passes (after milestones 5, 8, 11, and 14) are written up in the repository's QA report. Each finding was reproduced, fixed, and given its own test, including authorization leaks in activity feeds and race conditions around invoices.</li>
+        <li><strong>Review, then regression tests.</strong> Six structured reviews (after milestones 5, 8, 11, and 14, after merging in my earlier tools, and a full review by area) are written up in the repository's QA report. Each finding was reproduced, fixed, and given its own test, including authorization leaks in activity feeds and race conditions around invoices.</li>
       </ul>
 
       <h2>What shipped</h2>
-      <p>All 14 planned milestones are complete, and the project's 551 automated tests across 31 test files pass. Because it is a self-hosted application with its own server and database, there is no public live demo, so the screenshots here use made-up sample data. It is an operations tool, not accounting, tax, or payroll software, and the documentation says so.</p>
+      <p>All 14 planned milestones are complete, and the project has over 550 automated tests. Since then I have kept improving it: merging in my earlier proposal, time-tracking, and website-audit tools, adding coupon codes, a security log, and archive and restore across the lists, and simplifying the data model by merging duplicate tables. Because it is a self-hosted application with its own server and database, there is no public live demo, so the screenshots here use made-up sample data. It is an operations tool, not accounting, tax, or payroll software, and the documentation says so.</p>
 
       <h2>Skills this project shows</h2>
       <ul>

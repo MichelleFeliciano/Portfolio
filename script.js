@@ -743,16 +743,18 @@
     ["html", "HTML"],
     ["css", "CSS"],
     ["javascript", "JavaScript"],
+    ["typescript", "TypeScript and React"],
     ["responsive", "Responsive design"],
     ["accessibility", "Accessibility"],
     ["pwa", "Offline apps (PWA)"],
     ["storage", "Browser storage and IndexedDB"],
     ["data", "Data modeling and analysis"],
     ["python", "Python"],
+    ["api", "APIs and device sync"],
     ["sql", "SQL and relational databases"],
     ["testing", "Automated testing"],
     ["security", "Privacy and security"],
-    ["deployment", "Deployment (GitHub Pages)"]
+    ["deployment", "Deployment and hosting"]
   ];
 
   var projectGrid = document.querySelector(".project-grid");
